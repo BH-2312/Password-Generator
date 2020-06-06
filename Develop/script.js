@@ -6,8 +6,6 @@
 var passwordText = document.querySelector("#password");
 //generate password button
 var generateBtn = document.querySelector("#generate");
-//password
-//var password = "";
 // lower case characters
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 //Upper case characters
@@ -27,7 +25,8 @@ generateBtn.addEventListener("click",
     //variable for initial prompt
     var initialPrompt = prompt("How many characters in your password? (between 8-128 characters)");
     if (initialPrompt > 128 || initialPrompt < 8) { alert("too many or too few characters") }
-    else {
+    //else {
+  //prompts regarding the type of characters in password
       var UpperCheck = confirm("Do you want Upper Case letters in your password?");
       var LowerCheck = confirm("Do you want lower case letters in your password?");
       var NumberCheck = confirm("Do you want numbers in your password?");
@@ -36,16 +35,21 @@ generateBtn.addEventListener("click",
       //var hasLower = LowerCheck == true;
       //var hasNumber = NumberCheck == true;
       //var hasSymbol = SymbolCheck == true;
-      var long = initialPrompt;
-passwordText.value = password(long, lowerCase);
-//console.log(password(12,lowerCase));
-      function password (l,characters){
+      var length = initialPrompt;
+      //code that produces on-screen output
+passwordText.value = password(length, lowerCase);
+//ideally code would read 
+//passwordText.value = password(length, lowerCase, UpperCase, Number, Symbol);
+//However was unable to work this out in the alloted time
+
+// function to return password     
+function password (length,characters){
         var pwd ="";
-        for (var i=0; i<l; i++){
+        for (var i=0; i<length; i++){
           pwd += characters.charAt(Math.floor(Math.random() * characters.length));
         }
         return pwd;
 
     }
 
-   } });
+   } );
