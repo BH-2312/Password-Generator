@@ -31,13 +31,19 @@ generateBtn.addEventListener("click",
       var LowerCheck = confirm("Do you want lower case letters in your password?");
       var NumberCheck = confirm("Do you want numbers in your password?");
       var SymbolCheck = confirm("Do you want symbols in your password?");
-      //var hasUpper = UpperCheck == true;
-      //var hasLower = LowerCheck == true;
-      //var hasNumber = NumberCheck == true;
-      //var hasSymbol = SymbolCheck == true;
+      var hasUpper = UpperCheck == true;
+      var hasLower = LowerCheck == true;
+      var hasNumber = NumberCheck == true;
+      var hasSymbol = SymbolCheck == true;
       var length = initialPrompt;
+      var characters = ""
+      if (hasLower) { characters += lowerCase };
+      if (hasUpper) { characters += upperCase };
+      if (hasNumber) { characters += digits };
+      if (hasSymbol) { characters += symbols }
+      if (characters == ""){alert("You need to input a character type!")}
       //code that produces on-screen output
-passwordText.value = password(length, lowerCase);
+passwordText.value = password(length, characters);
 //ideally code would read 
 //passwordText.value = password(length, lowerCase, UpperCase, Number, Symbol);
 //However was unable to work this out in the alloted time
