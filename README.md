@@ -17,3 +17,7 @@ I am unsure if this method of prompts is the best way to do it as i found it tri
 A code was then (finally) created which created a password using the user inputs which showed on the user screen in the box. this code is only returning a value in lower case however as I was unable to work out a way to user the different variables.
 
 A random password is ultimately generated, however the output is only in lower case.
+
+update 19/6/2020
+
+I amended the .js file so that multiple characters were included in password. I also amended the code so that the password would not generate if user selected <8 or >128 characters.
