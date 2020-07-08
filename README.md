@@ -21,3 +21,5 @@ A random password is ultimately generated, however the output is only in lower c
 update 19/6/2020
 
 I amended the .js file so that multiple characters were included in password. I also amended the code so that the password would not generate if user selected <8 or >128 characters.
+
+https://bh-2312.github.io/Password-Generator/
